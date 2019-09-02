@@ -43,7 +43,10 @@ const siteContent = {
 };
 
 // give nav background color
-document.querySelector("header").style.backgroundColor = "blue";
+document.querySelector("header").style.backgroundColor = "pink";
+
+// give nav green text
+document.querySelector("nav").style.color = "green";
 
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
@@ -54,7 +57,8 @@ let navLinks = document.querySelectorAll("a");
 let navText = Object.values(siteContent.nav).slice(0, 6);
 navLinks.forEach((item, index) => {
   item.textContent = navText[index];
-  item.style.color = "black";
+  item.style.color = "green";
+  item.classList.add("green");
 });
 
 // header h1 tag
@@ -134,4 +138,20 @@ contactParagraph2.textContent = siteContent.contact.phone;
 let contactParagraph3 = document.querySelectorAll(".contact p")[2];
 contactParagraph3.textContent = siteContent.contact.email;
 
-console.log((contactParagraph3.style.color = "green"));
+// console.log((contactParagraph3.style.color = "green"));
+
+// select nav element
+let nav = document.querySelector("nav");
+nav.classList.add("green");
+
+// add new child to nav links
+let newNavLink = document.createElement("a");
+newNavLink.classList.add("green");
+let newPTag = document.createElement("p");
+let pText = document.createTextNode("Test p");
+let newNavLinkText = document.createTextNode("Test");
+newNavLink.appendChild(newNavLinkText);
+newPTag.appendChild(pText);
+// nav.appendChild(newNavLink);
+nav.prepend(newNavLink);
+nav.append(pText);

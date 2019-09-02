@@ -1,6 +1,9 @@
-var myVar = setInterval(myTimer, 1000);
+let secondTens = document.getElementById("secondTens");
+let secondOnes = document.getElementById("secondOnes");
+let msHundreds = document.getElementById("msHundreds");
+let msTens = document.getElementById("msTens");
 
-function myTimer() {
-  var d = new Date();
-  document.getElementById("test").innerHTML = d.toLocaleTimeString();
-}
+// update the timer to run every 10ms
+let timer = setInterval(() => {
+  console.log(33);
+}, 10);
