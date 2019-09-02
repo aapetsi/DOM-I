@@ -42,6 +42,9 @@ const siteContent = {
   }
 };
 
+// give nav background color
+document.querySelector("header").style.backgroundColor = "blue";
+
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
@@ -51,6 +54,7 @@ let navLinks = document.querySelectorAll("a");
 let navText = Object.values(siteContent.nav).slice(0, 6);
 navLinks.forEach((item, index) => {
   item.textContent = navText[index];
+  item.style.color = "black";
 });
 
 // header h1 tag
@@ -130,4 +134,4 @@ contactParagraph2.textContent = siteContent.contact.phone;
 let contactParagraph3 = document.querySelectorAll(".contact p")[2];
 contactParagraph3.textContent = siteContent.contact.email;
 
-console.log(contactParagraph3);
+console.log((contactParagraph3.style.color = "green"));
